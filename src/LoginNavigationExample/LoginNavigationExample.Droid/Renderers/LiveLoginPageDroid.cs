@@ -1,14 +1,14 @@
 using System;
 using Android.App;
 using LoginNavigationExample.CustomPages;
-using LoginNavigationExample.Droid.Renderer;
+using LoginNavigationExample.Droid.Renderers;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(LiveLoginPage), typeof(LiveLoginPageDroid))]
 
-namespace LoginNavigationExample.Droid.Renderer
+namespace LoginNavigationExample.Droid.Renderers
 {
 	public class LiveLoginPageDroid : PageRenderer
 	{
