@@ -1,16 +1,16 @@
 using System;
 using Android.App;
 using LoginNavigationExample.CustomPages;
-using LoginNavigationExample.Droid.Services;
+using LoginNavigationExample.Droid.Renderer;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(LiveLoginPage), typeof(LoginServiceDroid))]
+[assembly: ExportRenderer(typeof(LiveLoginPage), typeof(LiveLoginPageDroid))]
 
-namespace LoginNavigationExample.Droid.Services
+namespace LoginNavigationExample.Droid.Renderer
 {
-	public class LoginServiceDroid : PageRenderer
+	public class LiveLoginPageDroid : PageRenderer
 	{
 		protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
 		{
