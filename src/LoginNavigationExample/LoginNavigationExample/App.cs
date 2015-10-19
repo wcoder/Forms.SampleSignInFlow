@@ -11,9 +11,9 @@ namespace LoginNavigationExample
 			PresentMainPage();
 		}
 
-		public void PresentLogin()
+		public void PresentLogin(string message = "")
 		{
-			MainPage = new LoginPage();
+			MainPage = new LoginPage(message);
 		}
 
 		public void PresentMainPage()

@@ -12,6 +12,12 @@
 		<Entry x:Name="PasswordValue" />
 		
 		<Button x:Name="SubmitButton" Text="Login" Clicked="SubmitButton_OnClicked" />
+		
+		<Label HorizontalOptions="Center" Text="or" />
+		
+		<Button x:Name="LiveAuthButton" Text="Live ID" Clicked="LiveAuthButton_OnClicked"/>
+
+		<Label x:Name="ErrorLabel" IsVisible="False" />
 
 		<ActivityIndicator x:Name="LoginProgress" IsVisible="False" IsRunning="True" />
 		
