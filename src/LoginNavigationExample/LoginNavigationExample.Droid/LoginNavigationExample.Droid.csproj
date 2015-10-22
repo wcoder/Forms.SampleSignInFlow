@@ -79,6 +79,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\LiveLoginPageDroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -95,6 +96,10 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Xamarin.Auth-1.2.2\src\Xamarin.Auth.Android\Xamarin.Auth.Android.csproj">
+      <Project>{fcf02c8c-6dd3-4c59-a8a2-58bc01a4bb21}</Project>
+      <Name>Xamarin.Auth.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LoginNavigationExample\LoginNavigationExample.csproj">
       <Name>LoginNavigationExample</Name>
     </ProjectReference>
