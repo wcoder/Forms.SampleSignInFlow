@@ -38,7 +38,7 @@ namespace LoginNavigationExample
 
 			ErrorLabel.IsVisible = true;
 
-			if (string.IsNullOrEmpty(message))
+			if (!string.IsNullOrEmpty(message))
 			{
 				ErrorLabel.Text = string.Format("Error! {0}", message);
 			}
