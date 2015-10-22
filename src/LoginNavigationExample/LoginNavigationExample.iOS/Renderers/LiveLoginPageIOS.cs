@@ -5,8 +5,9 @@ using UIKit;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using LoginNavigationExample.iOS.Renderers;
 
-[assembly: ExportRenderer(typeof(LiveLoginPage), typeof(LiveLoginPage))]
+[assembly: ExportRenderer(typeof(LiveLoginPage), typeof(LiveLoginPageIOS))]
 
 namespace LoginNavigationExample.iOS.Renderers
 {
@@ -34,7 +35,7 @@ namespace LoginNavigationExample.iOS.Renderers
 				if (!eargs.IsAuthenticated)
 				{
 					App.IsLoggedIn = false;
-					((App)App.Current).PresentLogin("Canceled!");
+					((App) App.Current).PresentLogin("Canceled!");
 
 					return;
 				}
@@ -43,7 +44,7 @@ namespace LoginNavigationExample.iOS.Renderers
 
 				await App.Current.MainPage.Navigation.PopModalAsync();
 				App.IsLoggedIn = true;
-				((App)App.Current).PresentMainPage();
+				((App) App.Current).PresentMainPage();
 			};
 
 			UIViewController vc = auth.GetUI();
@@ -56,3 +57,4 @@ namespace LoginNavigationExample.iOS.Renderers
 			);
 		}
 	}
+}
